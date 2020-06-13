@@ -3,7 +3,7 @@ import classes from "./NavigationItem.css";
 
 const navigationItem = props => (
   <li className={classes.navigationItem}>
-    <a href={props.link} className={props.active ? classes.active : null}>
+    <a href={props.link} className={classes.NavigationItem}>
       {props.children}
     </a>
   </li>

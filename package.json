@@ -2,16 +2,18 @@
   "name": "burgerbuilder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rosekimball.github.io/BurgerBuilder",
   "dependencies": {
     "autoprefixer": "7.1.6",
-    "babel-core": "6.26.0",
+    "axios": "^0.19.2",
+    "babel-core": "^6.26.0",
     "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
+    "babel-jest": "^20.0.3",
     "babel-loader": "7.1.2",
     "babel-preset-react-app": "^3.1.2",
     "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
-    "chalk": "1.1.3",
+    "chalk": "^1.1.3",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
@@ -48,7 +50,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -91,5 +95,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.0.0"
   }
 }
